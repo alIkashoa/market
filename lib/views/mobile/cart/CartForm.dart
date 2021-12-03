@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'package:swiggy_ui/user/Login_data.dart';
 import 'package:swiggy_ui/utils/app_colors.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -49,13 +47,7 @@ _SignUpState(String? cart){
           .then((value) => print("User Added"))
           .catchError((error) => print("Failed to add user: $error"));
           };
-        
-
-          // UserUpdateInfo updateuser = UserUpdateInfo();
-          // updateuser.displayName = _name;
-          //  user.updateProfile(updateuser);
-     
-        
+              
       }
    
 
@@ -90,7 +82,7 @@ _SignUpState(String? cart){
        SizedBox(
          height: 60,
        ),
-       Center(child: Text("Register",style: TextStyle(color: darkOrange,fontSize: 35,fontWeight:FontWeight.bold,),)),
+       Center(child: Text("الشراء",style: TextStyle(color: darkOrange,fontSize: 35,fontWeight:FontWeight.bold,),)),
        SizedBox(
          height: 20,
        ),

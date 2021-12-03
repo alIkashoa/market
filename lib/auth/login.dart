@@ -60,11 +60,7 @@ class _LoginState extends State<Login> {
             title: Text('ERROR'),
             content: Text(errormessage),
             actions: <Widget>[
-              FlatButton(
-                  onPressed: () {
-                    Navigator.of(context).pop();
-                  },
-                  child: Text('OK'))
+            
             ],
           );
         });
@@ -136,7 +132,7 @@ class _LoginState extends State<Login> {
               ),
             ),
             GestureDetector(
-              child: Text('Create an Account?'),
+              child: Text('انشاء حساب'),
               onTap: navigateToSignUp,
             )
           ],

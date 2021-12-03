@@ -2,29 +2,20 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:swiggy_ui/views/mobile/search/search_screen.dart';
 import 'package:swiggy_ui/views/mobile/swiggy/swiggy_screen.dart';
-import 'package:swiggy_ui/views/mobile/search/search.dart';
 import '../../utils/app_colors.dart';
-import 'account/account_screen.dart';
 import 'cart/cart_screen.dart';
-import 'package:swiggy_ui/user/Login_data.dart';
-import 'package:firebase_core/firebase_core.dart';
 import 'alert.dart';
 import 'cart/bils.dart';
 
 
-//This widget is the main widget.
-
-
-//Initial widget
 class InitalScreenWidget extends StatefulWidget{
-  // InitialScreenWidget({Key key}) : super(key: key);
 
   @override
   HomeWidget createState() => HomeWidget();
     
 }
 
-//State<StatefulWidget> action method
+
 class HomeWidget extends State<InitalScreenWidget>{
   int _count = 0;
   Color? _iconPressed1 = swiggyOrange;

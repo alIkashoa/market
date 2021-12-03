@@ -32,10 +32,6 @@ for (var item in doc["markets"].split(" ")) {
     
   }
 }
-
-
-
-
             users
     .doc(doc.id)
     .set({
@@ -50,19 +46,6 @@ for (var item in doc["markets"].split(" ")) {
     .catchError((error) => print("Failed to add user: $error"));
         });
     });
-// stream:FirebaseFirestore.instance.collection("users").where("email",isEqualTo: "kashoaalii@gmail.com").snapshots(),
-// builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-// if(!snapshot.hasData){
-//   //String x =  snapshot.data!.docs.length.toString();
-//   print("no data");
-// return  Text(('no metching Results'),style: TextStyle(fontSize: 30));
-// }
-// print(snapshot.data!.docs[0].data()["markets"]);
-// print(snapshot.data!.docs[0]);
-// print("succes");
-// return Text("succes");
-// }
-//    );
   }
 class Alerts extends StatelessWidget{
 

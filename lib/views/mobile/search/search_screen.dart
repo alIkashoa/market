@@ -6,8 +6,6 @@ import 'package:swiggy_ui/utils/ui_helper.dart';
 import 'package:swiggy_ui/widgets/custom_divider_view.dart';
 import 'package:swiggy_ui/widgets/mobile/search_food_list_item_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:swiggy_ui/views/mobile/search/SearchScreenwithsnapshot.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 final FirebaseAuth _auth = FirebaseAuth.instance;
 
@@ -291,50 +289,3 @@ return
   }
 }
 
-// FirebaseFirestore firestore = FirebaseFirestore.instance;
-// class _SearchListView extends StatelessWidget {
-
-//   @override
-//   Widget build(BuildContext context) {
-//        return Flexible(child:
-// StreamBuilder(
-  
-// stream:firestore.collection("teacher").snapshots(),
-// builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
-// if(!snapshot.hasData){
-//   //String x =  snapshot.data!.docs.length.toString();
-// return  Text(('no metching Results'),style: TextStyle(fontSize: 30));
-// }
-// return 
-//  ListView.builder(
-   
-//       shrinkWrap: true,
-//       itemCount: snapshot.data!.docs.length,
-//       itemBuilder: (context, index) => SearchFoodListItemView(
-        
-
-//         food:   new SpotlightBestTopFood(
-
-//         image : snapshot.data!.docs[index].data()["imagePath"],
-//         name:snapshot.data!.docs[index].data()["name"],
-//         desc:snapshot.data!.docs[index].data()["about"].substring(0,10)+"...",
-//         coupon:snapshot.data!.docs[index].data()["license"],
-//         ratingTimePrice:snapshot.data!.docs[index].data()["rating"].toString(),
-
-//         ),
-//       ),
-//     );
-
-
-// },
-
-
-
-    
-  
-
-//     ));
-
-    
-//   }
-//}

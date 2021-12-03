@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swiggy_ui/models/spotlight_best_top_food.dart';
 import 'package:swiggy_ui/utils/ui_helper.dart';
-import 'package:swiggy_ui/widgets/mobile/spotlight_best_top_food_item.dart';
 import 'package:swiggy_ui/widgets/responsive.dart';
 
 class InTheSpotlightView extends StatelessWidget {
@@ -20,24 +18,6 @@ class InTheSpotlightView extends StatelessWidget {
           UIHelper.verticalSpaceSmall(),
           _buildSpotlightHeaderView(context),
           UIHelper.verticalSpaceMedium(),
-          // LimitedBox(
-          //   maxHeight: 270.0,
-          //   child: ListView.builder(
-          //     shrinkWrap: true,
-          //     scrollDirection: Axis.horizontal,
-          //     itemCount: restaurants.length,
-          //     itemBuilder: (context, index) => Container(
-          //       width: customWidth,
-          //       child: Column(
-          //         mainAxisSize: MainAxisSize.min,
-          //         children: <Widget>[
-          //           SpotlightBestTopFoodItem(restaurant: restaurants[index][0]),
-          //           SpotlightBestTopFoodItem(restaurant: restaurants[index][1])
-          //         ],
-          //       ),
-          //     ),
-          //   ),
-          // )
         ],
       ),
     );

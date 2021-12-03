@@ -2,14 +2,9 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:swiggy_ui/utils/app_colors.dart';
 import 'package:swiggy_ui/utils/ui_helper.dart';
-import 'package:swiggy_ui/views/mobile/swiggy/genie/genie_screen.dart';
 import 'package:swiggy_ui/widgets/responsive.dart';
-import 'package:swiggy_ui/user/Login_data.dart';
-import 'all_restaurants/all_restaurants_screen.dart';
 import 'genie/genie_grocery_card_view.dart';
-import 'meat/meat_screen.dart';
 import 'package:swiggy_ui/views/mobile/search/search_screen.dart';
-import 'package:firebase_core/firebase_core.dart';
 
 class FoodGroceriesAvailabilityView extends StatelessWidget {
   @override

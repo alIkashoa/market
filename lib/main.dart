@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:swiggy_ui/views/tab_desktop/tab_screen.dart';
+
 import 'shared/app_theme.dart';
-import 'views/tab_desktop/desktop_screen.dart';
+
 import 'views/mobile/mobile_screen.dart';
-import 'widgets/responsive.dart';
-//import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 void main() async {
@@ -20,11 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'SwiggyUI',
       debugShowCheckedModeBanner: false,
       theme: appPrimaryTheme(),
-      home: Responsive(
-        mobile: MobileScreen(),
-        tablet: TabScreen(),
-        desktop: DesktopScreen(),
-      ),
+   home: MobileScreen(),
     );
   }
 }

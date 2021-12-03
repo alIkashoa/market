@@ -1,35 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:swiggy_ui/utils/app_colors.dart';
 import 'package:swiggy_ui/utils/ui_helper.dart';
-import 'package:swiggy_ui/widgets/custom_divider_view.dart';
-import 'package:swiggy_ui/widgets/veg_badge_view.dart';
-import 'package:swiggy_ui/utils/ui_helper.dart';
-//import 'package:swiggy_ui/views/mobile/search/search_screen.dart';
-import 'package:swiggy_ui/widgets/custom_divider_view.dart';
-import 'package:swiggy_ui/widgets/responsive.dart';
 import 'package:swiggy_ui/user/Login_data.dart';
 import 'package:swiggy_ui/models/spotlight_best_top_food.dart';
-import 'package:swiggy_ui/views/mobile/search/search_screen.dart';
 import 'package:swiggy_ui/models/user.dart';
-//import 'best_in_safety_view.dart';
-// import 'package:flutter/material.dart';
-// import 'package:swiggy_ui/models/spotlight_best_top_food.dart';
-// import 'package:swiggy_ui/utils/app_colors.dart';
-// import 'package:swiggy_ui/utils/ui_helper.dart';
-// import 'package:swiggy_ui/widgets/custom_divider_view.dart';
 import 'package:swiggy_ui/widgets/mobile/search_food_list_item_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:swiggy_ui/widgets/mobile/search_food_list_item_view.dart';
 import 'CartForm.dart';
-// import 'in_the_spotlight_view.dart';
-// import 'indian_food/indian_food_view.dart';
-
-// import 'popular_brand_view.dart';
-// import 'popular_categories_view.dart';
-// import 'restaurants/restaurant_vertical_list_view.dart';
-
-//import 'top_offer_view.dart';
 final FirebaseAuth _auth = FirebaseAuth.instance;
 class CartScreen extends StatelessWidget {
  
@@ -115,10 +93,10 @@ buycart() async {
       child: 
         Row(
             children: <Widget>[
-              Icon(Icons.thumb_up, size: 20.0),
+              Icon(Icons.shopping_basket_outlined, size: 30.0),
               UIHelper.horizontalSpaceSmall(),
               Text(
-                'your markets',
+                'My Cart',
                 style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20.0),
               )
             ],
@@ -132,12 +110,6 @@ if(!snapshot.hasData){
   //String x =  snapshot.data!.docs.length.toString();
 return  Text((email),style: TextStyle(fontSize: 30));
 }
-
-// print(snapshot.data!.docs[0].data()["cart"].split("`")[0]);
-//  print(snapshot.data!.docs[0].data()["cart"].split("`")[0].split(" ")[0]);
-// print(snapshot.data!.docs[0].data()["cart"].split("`")[0].split(" ")[0]);
-// print(snapshot.data!.docs[0].data()["cart"].split("`")[0].split(" ")[0]);
-
 int? l=0;
 String markets ="";
 if(snapshot.data!.docs[0].data()["cart"].startsWith("`")){
@@ -192,40 +164,7 @@ return  ListView.builder(
       
       
  )
-   
-//       SearchFoodListItemView(
-        
-
-
-//         food:   new SpotlightBestTopFood(
-//         image : items![index].split(" ")[2],
-//         name:items[index].split(" ")[0],
-//         desc: items[index].split(" ")[1],
-//         coupon:snapshot.data!.docs[index].data()["license"],
-//         ratingTimePrice:snapshot.data!.docs[index].data()["rating"].toString(),
-//         usr: new Users(
-//         imagePath: snapshot.data!.docs[index].data()["imagePath"].toString() , 
-//         name: snapshot.data!.docs[index].data()["name"].toString(),
-//         email: snapshot.data!.docs[index].data()["email"].toString(),
-//         about: snapshot.data!.docs[index].data()["about"].toString(),
-//         license: snapshot.data!.docs[index].data()["license"].toString() ,
-//         age: snapshot.data!.docs[index].data()["age"].toString(),
-//         sex: snapshot.data!.docs[index].data()["sex"].toString(),
-//        carPath: snapshot.data!.docs[index].data()["carPath"].toString(),
-//        xp: snapshot.data!.docs[index].data()["xp"].toString(),
-//        region: snapshot.data!.docs[index].data()["region"] .toString(),
-//        students: snapshot.data!.docs[index].data()["students"].toString() ,
-//        totalstudents: snapshot.data!.docs[index].data()["totalstudents"].toString() ,
-//        rating: snapshot.data!.docs[index].data()["rating"].toString() ,
-//        phoneNumber: snapshot.data!.docs[index].data()["phoneNumber"].toString(),)
-
-        
-
-//         ),
-      
-      
-//  )
-);
+   );
 
                        }
                        ),)

@@ -1,12 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:swiggy_ui/models/spotlight_best_top_food.dart';
-import 'package:swiggy_ui/utils/app_colors.dart';
-import 'package:swiggy_ui/utils/ui_helper.dart';
-import 'package:swiggy_ui/widgets/custom_divider_view.dart';
-import 'package:swiggy_ui/widgets/mobile/search_food_list_item_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:swiggy_ui/views/mobile/search/SearchScreenwithsnapshot.dart';
 import 'package:swiggy_ui/views/mobile/search/search_screen.dart';
 
 

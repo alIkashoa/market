@@ -2,7 +2,6 @@ import 'package:card_swiper/card_swiper.dart';
 import 'package:flutter/material.dart';
 import 'package:swiggy_ui/widgets/responsive.dart';
 
-import '../groceries/grocery_screen.dart';
 
 class OfferBannerView extends StatelessWidget {
   final List<String> images = [

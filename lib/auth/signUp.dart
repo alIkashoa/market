@@ -35,7 +35,7 @@ class _SignUpState extends State<SignUp> {
       _formKey.currentState!.save();
 if(!(_password==_password2)){
  showError("password doesent math");
- print("there");
+
 
 }else{
       try {
@@ -104,7 +104,7 @@ if(!(_password==_password2)){
        SizedBox(
          height: 60,
        ),
-       Center(child: Text("Register",style: TextStyle(color: darkOrange,fontSize: 35,fontWeight:FontWeight.bold,),)),
+       Center(child: Text("انشاء حساب",style: TextStyle(color: darkOrange,fontSize: 35,fontWeight:FontWeight.bold,),)),
        SizedBox(
          height: 20,
        ),

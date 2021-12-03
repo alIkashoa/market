@@ -2,14 +2,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:swiggy_ui/models/user.dart';
 import 'package:swiggy_ui/views/mobile/swiggy/widget/button_widget.dart';
-import 'package:swiggy_ui/views/mobile/swiggy/widget/numbers_widget.dart';
 import 'package:swiggy_ui/views/mobile/swiggy/widget/profile_widget.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-// import '/model/user.dart';
-// import '/widget/button_widget.dart';
-// import '/widget/numbers_widget.dart';
-// import '/widget/profile_widget.dart';
 
  final FirebaseAuth _auth = FirebaseAuth.instance;
 late String? _data;

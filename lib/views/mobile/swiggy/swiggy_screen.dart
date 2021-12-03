@@ -3,36 +3,21 @@ import 'package:swiggy_ui/auth/start.dart';
 import 'package:swiggy_ui/models/spotlight_best_top_food.dart';
 import 'package:swiggy_ui/utils/app_colors.dart';
 import 'package:swiggy_ui/utils/ui_helper.dart';
-//import 'package:swiggy_ui/views/mobile/search/search_screen.dart';
+import 'package:swiggy_ui/views/mobile/swiggy/aboutPage.dart';
 import 'package:swiggy_ui/widgets/custom_divider_view.dart';
 import 'package:swiggy_ui/widgets/responsive.dart';
 import 'package:swiggy_ui/user/Login_data.dart';
-import 'all_restaurants/all_restaurants_screen.dart';
 import 'package:swiggy_ui/views/mobile/search/search_screen.dart';
 import 'package:swiggy_ui/models/user.dart';
-//import 'best_in_safety_view.dart';
-// import 'package:flutter/material.dart';
-// import 'package:swiggy_ui/models/spotlight_best_top_food.dart';
-// import 'package:swiggy_ui/utils/app_colors.dart';
-// import 'package:swiggy_ui/utils/ui_helper.dart';
-// import 'package:swiggy_ui/widgets/custom_divider_view.dart';
 import 'package:swiggy_ui/widgets/mobile/search_food_list_item_view.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-// import 'package:firebase_core/firebase_core.dart';
 import 'food_groceries_availability_view.dart';
 import 'genie/genie_view.dart';
-// import 'in_the_spotlight_view.dart';
-// import 'indian_food/indian_food_view.dart';
 import 'offers/offer_banner_view.dart';
-import 'offers/offer_screen.dart';
-// import 'popular_brand_view.dart';
-// import 'popular_categories_view.dart';
-// import 'restaurants/restaurant_vertical_list_view.dart';
 import 'swiggy_safety_banner_view.dart';
-//import 'top_offer_view.dart';
 import 'top_picks_for_you_view.dart';
-
+import 'aboutPage.dart';
 
 
 final FirebaseAuth _auth = FirebaseAuth.instance;
@@ -58,21 +43,11 @@ class SwiggyScreen extends StatelessWidget {
                       FoodGroceriesAvailabilityView(),
                        TopPicksForYouView(),
                         OfferBannerView(),
-                      //  CustomDividerView(),
-                      //  IndianFoodView(),
-                      //  CustomDividerView(),
-                      //  InTheSpotlightView(),
-                      //  CustomDividerView(),
-                      //  PopularBrandsView(),
                        CustomDividerView(),
                        SwiggySafetyBannerView(),
-                   //    BestInSafetyViews(),
-                   // CustomDividerView(),
-                      //TopOffersViews(),
                       CustomDividerView(),
                       GenieView(),
                       CustomDividerView(),
-                      // PopularCategoriesView(),
                        CustomDividerView(),
                         Container(
       margin: const EdgeInsets.all(15.0),
@@ -82,7 +57,7 @@ class SwiggyScreen extends StatelessWidget {
               Icon(Icons.thumb_up, size: 20.0),
               UIHelper.horizontalSpaceSmall(),
               Text(
-                'your markets',
+                'ماركتاتي',
                 style: Theme.of(context).textTheme.headline4!.copyWith(fontSize: 20.0),
               )
             ],
@@ -90,7 +65,7 @@ class SwiggyScreen extends StatelessWidget {
                        Flexible(child:
 StreamBuilder(
 
-stream:FirebaseFirestore.instance.collection("users").where("email", isEqualTo: mail).snapshots(),
+stream:FirebaseFirestore.instance.collection("users").where("email", isEqualTo: mail).limit(10).snapshots(),
 builder: (BuildContext context, AsyncSnapshot<QuerySnapshot> snapshot) {
 if(!snapshot.hasData){
   //String x =  snapshot.data!.docs.length.toString();
@@ -224,23 +199,7 @@ return
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => Scaffold(
-
-body: 
-Center(child:
-Column(children: [
-
-
-  
-Center(child: Text("contuct us under :",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w700),),),
-Center(child: Text("*******",style: TextStyle(fontSize: 24,fontWeight: FontWeight.w700),),),
-
-
-
-],))
-
-
-                    ),
+                    builder: (context) =>Aboutt()
                   ),
                 );
               },
@@ -267,7 +226,7 @@ class SeeAllRestaurantBtn extends StatelessWidget {
       child: ElevatedButton(
         style: ElevatedButton.styleFrom(primary: darkOrange),
         child: Text(
-          'See all my Markets',
+          ' الى جميع السوبرماركتات',
           style: Theme.of(context)
               .textTheme
               .subtitle2!

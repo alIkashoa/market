@@ -73,7 +73,7 @@ Navigator.pop(context);
                 ])),
             SizedBox(height: 10.0),
             Text(
-              'Logg out from youre '+globalname+' account',
+              'غادر حسابك الان',
               style: TextStyle(color: Colors.black),
             ),
             SizedBox(height: 30.0),
@@ -84,7 +84,7 @@ Navigator.pop(context);
                     padding: EdgeInsets.only(left: 30, right: 30),
                     onPressed: loggout,
                     child: Text(
-                      'LogOut',
+                      'خروج',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -118,7 +118,7 @@ Navigator.pop(context);
             SizedBox(height: 20),
             RichText(
                 text: TextSpan(
-                    text: 'Welcome to ',
+                    text: 'مرحبا بك',
                     style: TextStyle(
                         fontSize: 25.0,
                         fontWeight: FontWeight.bold,
@@ -133,7 +133,7 @@ Navigator.pop(context);
                 ])),
             SizedBox(height: 10.0),
             Text(
-              'Start youre journey with '+globalname,
+              'ابدء رحلتك الان مع '+globalname,
               style: TextStyle(color: Colors.black),
             ),
             SizedBox(height: 30.0),
@@ -144,7 +144,7 @@ Navigator.pop(context);
                     padding: EdgeInsets.only(left: 30, right: 30),
                     onPressed: navigateToLogin,
                     child: Text(
-                      'LOGIN',
+                      'الدخول',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
@@ -160,7 +160,7 @@ Navigator.pop(context);
                     padding: EdgeInsets.only(left: 30, right: 30),
                     onPressed: navigateToRegister,
                     child: Text(
-                      'REGISTER',
+                      'انشاء حساب',
                       style: TextStyle(
                         fontSize: 20,
                         fontWeight: FontWeight.bold,
